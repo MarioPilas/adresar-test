@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { Segment, Form, Button, Header } from "semantic-ui-react";
+import { Segment, Form, Button } from "semantic-ui-react";
 import { create, update, deletee } from "../actions";
 import cuid from "cuid";
 import { connect } from "react-redux";
 import { reduxForm, Field } from "redux-form";
 import TextInput from "./TextInput";
 import { isRequired, combineValidators } from "revalidate";
+import { Link } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
   const addressId = ownProps.match.params.id;
@@ -26,8 +27,10 @@ const actions = {
 const validate = combineValidators({
   fName: isRequired({ message: "Molimo unesite Ime" }),
   lName: isRequired({ message: "Molimo unesite Prezime" }),
-  phone: isRequired({ message: "Molimo unesite broj mobitela" }),
-  email: isRequired({ message: "Molimo unesite email" })
+  mobile: isRequired({ message: "Molimo unesite broj mobitela" }),
+  phone: isRequired({ message: "Molimo unesite broj telefona" }),
+  email: isRequired({ message: "Molimo unesite email" }),
+  date: isRequired({ message: "Molimo unesite datum rodenja" })
 });
 
 class AddressBook extends Component {
@@ -52,7 +55,7 @@ class AddressBook extends Component {
   render() {
     const { invalid, submitting, pristine } = this.props;
     return (
-      <Segment>
+      <Segment className="ui left floated segment">
         <Form onSubmit={this.props.handleSubmit(this.onFormSubmit)}>
           
           <Field
@@ -60,28 +63,42 @@ class AddressBook extends Component {
             type="text"
             component={TextInput}
             placeholder="Unesite Ime"
-            autoComplete='none'
+            autoComplete='off'
           />
           <Field
             name="lName"
             type="text"
             component={TextInput}
             placeholder="Unesite Prezime"
-            autoComplete='none'
+            autoComplete='off'
+          />
+           <Field
+            name="mobile"
+            type="text"
+            component={TextInput}
+            placeholder="Unesite broj mobitela"
+            autoComplete='off'
           />
           <Field
             name="phone"
             type="text"
             component={TextInput}
-            placeholder="Unesite broj mobitela"
-            autoComplete='none'
+            placeholder="Unesite broj telefona"
+            autoComplete='off'
           />
           <Field
             name="email"
             type="text"
             component={TextInput}
             placeholder="Unesite email"
-            autoComplete='none'
+            autoComplete='off'
+          />
+           <Field
+            name="date"
+            type="date"
+            component={TextInput}
+            placeholder="Unesite datum rodenja"
+            autoComplete='off'
           />
 
           <Button
@@ -98,12 +115,14 @@ class AddressBook extends Component {
             content="Obrisi"
             color="red"
           />
-          <Button
+        </Form>
+        <Button
             type="secondary button"
             content="Vrati se"
             color="grey"
+            as={Link}
+            to="/adresar"
           />
-        </Form>
       </Segment>
     );
   }

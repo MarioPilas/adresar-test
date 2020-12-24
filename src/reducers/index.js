@@ -1,4 +1,3 @@
-
 import { createReducer } from "./InitalReducer";
 import { CREATE,DELETE,UPDATE } from '../actions/types';
 const initialState = [
@@ -6,62 +5,81 @@ const initialState = [
     id: "1",
     fName: "Zanzibar",
     lName: "Dodo",
-    phone: "098678988",
-    email: "something@gmail.com"
+    mobile: "098678988",
+    phone: "040578345",
+    email: "something@gmail.com",
+    date: "11/15/1991"
   },
   {
     id: "2",
     fName: "Samuraj",
     lName: "Sami",
-    phone: "098678988",
-    email: "something@gmail.com"
+    mobile: "098678988",
+    phone: "040578345",
+    email: "something@gmail.com",
+    date: "11/15/1991"
   }, {
     id: "3",
     fName: "Noz",
     lName: "Ostar",
-    phone: "098678988",
-    email: "something@gmail.com"
+    mobile: "098678988",
+    phone: "040578345",
+    email: "something@gmail.com",
+    date: "11/15/1991"
   },
   {
     id: "4",
     fName: "Slavek",
     lName: "Donji",
-    phone: "098678988",
-    email: "something@gmail.com"
+    mobile: "098678988",
+    phone: "040578345",
+    email: "something@gmail.com",
+    date: "11/15/1991"
+
   } ,{
     id: "5",
     fName: "Lara",
     lName: "Nedim",
-    phone: "098678988",
-    email: "something@gmail.com"
+    mobile: "098678988",
+    phone: "040578345",
+    email: "something@gmail.com",
+    date: "11/15/1991"
   },
   {
     id: "6",
     fName: "Luka",
     lName: "Lukac",
-    phone: "098678988",
-    email: "something@gmail.com"
+    mobile: "098678988",
+    phone: "040578345",
+    email: "something@gmail.com",
+    date: "11/15/1991"
   },
   {
     id: "7",
     fName: "Dana",
     lName: "Bijela",
-    phone: "098678988",
-    email: "something@gmail.com"
+    mobile: "098678988",
+    phone: "040578345",
+    email: "something@gmail.com",
+    date: "11/15/1991"
   },
   {
     id: "8",
     fName: "Cyber",
     lName: "Nun",
-    phone: "098678988",
-    email: "something@gmail.com"
+    mobile: "098678988",
+    phone: "040578345",
+    email: "something@gmail.com",
+    date: "11/15/1991"
   },
   {
     id: "9",
     fName: "Medo",
     lName: "Brundo",
-    phone: "098678988",
-    email: "something@gmail.com"
+    mobile: "098678988",
+    phone: "040578345",
+    email: "something@gmail.com",
+    date: "11/15/1991"
   }
 ]
 

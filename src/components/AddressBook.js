@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import {  Menu, Header } from "semantic-ui-react";
+import {  Menu } from "semantic-ui-react";
 import { connect } from "react-redux";
 import SortFilter from "./SortFilter";
 import { Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import "../css/Header.css";
 
 const mapStateToProps = state => ({
   addresses: state.test
@@ -15,21 +16,21 @@ class AddressBook extends Component {
     return (
         <div>
           <div className='ui secondary pointing menu'>
+            
+          <h1 className='head'>Adresar</h1>
+          
             <div className='right menu'>
+              <button className="ui red button">
             <Link to='/' className='item'>
               Log out
             </Link>
+            </button>
+            
             </div>
           </div>
-            
+          
       <Menu size="massive" vertical>
-        <Header
-          icon="user"
-          attached
-          inverted
-          color="grey"
-          content="Adresar"
-        />
+       
         <Button
           as={Link}
           to="/adresar/omiljeni"
